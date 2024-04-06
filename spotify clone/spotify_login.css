@@ -54,6 +54,11 @@ body {
   margin: 3rem 0 2rem 0;
 }
 
+.login-options {
+  cursor: pointer;
+
+}
+
 .login-options .login-option1 {
   display: flex;
   /* justify-content: ; */
@@ -83,6 +88,7 @@ body {
   height: 1.2rem;
   width: 1.2rem;
   /* padding-top:10px; */
+  cursor: pointer;
 }
 .blank-box {
   margin: 2rem 6.25rem 2rem 6.25rem;
