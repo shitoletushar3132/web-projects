@@ -10,9 +10,28 @@ body{
     width: 100vw;
     align-items: center;
     overflow: hidden;
-
 }
 
+html.dark{
+    color: #fff;
+    background-color: #000;
+    transition: all 0.7s ease;
+}
+.dark2{
+    position: absolute;
+    top:20px;
+    right:50px;
+    border: none;
+    font-size: 20px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+html.dark .dark2{
+    color: white;
+    background-color: #000;
+    transition: all 0.7s ease;
+}
 .container {
     display: flex;
     justify-content: center;
@@ -22,14 +41,27 @@ body{
     height: 100%;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     overflow: scroll;
-    
-    
 }
 
+html.dark .container{
+    background-color: #000;
+    box-shadow: 0 0 10px rgba(225, 225, 225, 0.3);
+    transition: all 0.7s ease;
+}
+
+.container::-webkit-scrollbar{
+    width: 0;
+}
 h1 {
-    color: #333;
+    transition: all 0.7s ease;
+    color:#333
+}
+
+html.dark h1 {
+    color: rgba(130, 127, 127, 0.8);
+    transition: all 0.7s ease;
 }
 
 ul {
@@ -51,6 +83,7 @@ a {
 a:hover {
     color: #0056b3;
 }
+
 
 @media (max-width: 768px) {
     .container {
