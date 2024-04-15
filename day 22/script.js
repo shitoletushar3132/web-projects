@@ -30,10 +30,11 @@ function dragOver(e){
 
 function dragEnter(e){
     e.preventDefault();
+    this.className += ' hovered'
 }
 
 function dragLeave(){
-    
+    this.className = 'empty'
 }
 
 function dragDrop(){
