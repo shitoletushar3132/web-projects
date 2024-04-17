@@ -43,6 +43,8 @@ html.dark .dark2{
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     overflow: scroll;
+    overflow-x: hidden;
+    cursor: pointer;
 }
 
 html.dark .container{
@@ -51,9 +53,26 @@ html.dark .container{
     transition: all 0.7s ease;
 }
 
-.container::-webkit-scrollbar{
-    width: 0;
-}
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #333; 
+  }
 h1 {
     transition: all 0.7s ease;
     color:#333
