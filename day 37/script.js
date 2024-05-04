@@ -1,5 +1,5 @@
 const container = document.getElementById('container');
-const SQUARES = 10000;
+const SQUARES = 500;
 function random(){
     return Math.floor(Math.random()*255+1);
 }
