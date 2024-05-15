@@ -1,12 +1,22 @@
-const dark2 = document.querySelector('button');
+document.addEventListener('DOMContentLoaded', () => {
+    const darkToggle = document.querySelector('.dark-toggle');
+    const body = document.body;
 
-dark2.addEventListener('click',(dark)=>{
-    const html =document.querySelector('html')
-    if(html.classList.contains('dark')){
-        html.classList.remove('dark');
-        dark2.innerHTML=`<i class="fa-solid fa-moon"></i>`
-    }else{
-       html.classList.add('dark')
-       dark2.innerHTML=`<i class="fa-solid fa-sun"></i>`
+    
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        body.classList.add('dark-mode');
+        darkToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
     }
-})
+
+    darkToggle.addEventListener('click', () => {
+        if (body.classList.contains('dark-mode')) {
+            body.classList.remove('dark-mode');
+            darkToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+            localStorage.setItem('darkMode', 'disabled');
+        } else {
+            body.classList.add('dark-mode');
+            darkToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+            localStorage.setItem('darkMode', 'enabled');
+        }
+    });
+});

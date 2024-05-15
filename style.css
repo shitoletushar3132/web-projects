@@ -1,114 +1,29 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
 body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
-  align-items: center;
-  overflow: hidden;
+    font-size: 1.1rem;
 }
 
-html.dark {
-  color: #fff;
-  background-color: #000;
-  transition: all 0.7s ease;
-}
-.dark2 {
-  position: absolute;
-  top: 20px;
-  right: 50px;
-  border: none;
-  font-size: 20px;
-  background-color: #fff;
-  cursor: pointer;
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
-html.dark .dark2 {
-  color: white;
-  background-color: #000;
-  transition: all 0.7s ease;
-}
-.container {
-  display: flex;
-  justify-content: center;
-  /* text-align: center; */
-  padding: 20px;
-  min-width: 300px;
-  height: 100%;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  overflow: scroll;
-  overflow-x: hidden;
-  cursor: pointer;
-  margin: 20px 0;
+.dark-mode .navbar {
+    background-color: #333;
 }
 
-html.dark .container {
-  background-color: #000;
-  box-shadow: 0 0 10px rgba(225, 225, 225, 0.3);
-  transition: all 0.7s ease;
+.dark-mode .list-group-item {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
+.dark-mode .list-group-item-action:hover {
+    background-color: #2a2a2a;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: grey;
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #333;
-}
-h1 {
-  transition: all 0.7s ease;
-  color: #333;
-}
-
-html.dark h1 {
-  color: rgba(130, 127, 127, 0.8);
-  transition: all 0.7s ease;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-a {
-  text-decoration: none;
-  color: #007bff;
-  transition: color 0.3s ease;
-  font-size: 20px;
-}
-
-a:hover {
-  color: #0056b3;
-}
-
-@media (max-width: 768px) {
-  .container {
-    max-width: 70%;
-  }
-  h1{
-    font-size: 30px;
-  }
+.dark-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
