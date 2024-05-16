@@ -27,3 +27,24 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
 }
+
+.btn:active{
+    outline: none;
+}
+
+.items{
+    margin-top:10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.items .btn{
+    margin-right: 10px;
+}
+
+.items a {
+    color: #fff;
+    text-transform: capitalize;
+}
